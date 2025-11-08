@@ -9,19 +9,33 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 ## 対応 AI
 
-- Agents
-  - [Agents.md](./AGENTS.md)
-- Cursor
-  - [Cursor Rules](./.cursor/rules/index.mdc)
-  - [Cursor Slash Commands Instructions](./.cursor/slash-commands.md)
-  - [Cursor Custom Slash Commands](./.cursor/commands/)
-  - [Cursor MCP](./.cursor/mcp.json)
-- Claude Code
-  - [Claude Code Rules](./CLAUDE.md)
-  - [Claude Code MCP](./mcp.json)
-  - [Claude Code Settings](./.claude/settings.local.json)
-- Windsurf
-  - [Windsurf Rules](./.windsurf/rules/index.md)
+### Agents
+
+- [Agents.md](./AGENTS.md)
+
+### Cursor
+
+- [Cursor Rules](./.cursor/rules/index.mdc)
+- [Cursor Custom Slash Commands](./.cursor/commands/)
+
+  - [README.md](./.cursor/slash-commands.md) here.
+
+- [Cursor MCP](./.cursor/mcp.json)
+
+### Claude Code
+
+- [Claude Code Rules](./CLAUDE.md)
+- [Claude Code MCP](./mcp.json)
+- [Claude Code Settings](./.claude/settings.local.json)
+
+### Windsurf
+
+- [Windsurf Rules](./.windsurf/rules/index.md)
+- [Windsurf Workflows](./.windsurf/workflows/)
+- [Windsurf MCP](https://docs.windsurf.com/windsurf/cascade/mcp)
+  - The `~/.codeium/windsurf/mcp_config.json` file is a JSON file that contains a list of servers that Cascade can connect to.
+- [Cascade Hooks](https://docs.windsurf.com/windsurf/cascade/hooks)
+  - User-level hooks are perfect for personal preferences and optional workflows.`~/.codeium/windsurf/hooks.json`
 
 ## ルール構成
 

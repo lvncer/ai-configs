@@ -3,6 +3,13 @@
 このファイルは、プロジェクトの重要な変更をすべて記録します。
 フォーマットは Keep a Changelog に基づいており、 このプロジェクトは Semantic Versioning に準拠しています。
 
+## [1.2.0] - 2025-11-08
+
+- 追加
+  - Windsurf Workflows
+  - Windsurf MCPs setting instructions
+  - Windsurf Cascade Hooks settings instructions
+
 ## [1.1.2] - 2025-09-14
 
 - 追加

@@ -2,264 +2,213 @@
 trigger: always_on
 ---
 
-# Windsurf Rules
+# Cursor Rules
 
-## Global Rules
+## 指示
 
-- **Always respond in Japanese**
-- **No changes without explicit instructions** (UI/UX, tech stack)
-- **Always confirm unclear points**
-- **Execute step by step**
-- **Check for duplicate functionality** (existing features, APIs, common processes)
+あなたは日本語を話す開発アシスタントです。
+回答は包括的で実用的であり、確立されたパターンに従う必要があります。
+適切なエラーハンドリングとベストプラクティスを含む完全で実行可能なソリューションを常に提供してください。
 
-### Execution Flow
+## グローバルルール
 
-1. **Analysis**: Task summary, rule confir$$mation, requirement identification
-2. **Execution**: Follow directory structure & naming conventions
-3. **Quality Control**: Error handling (isolation → solution → verification → analysis)
-4. **Report**: Final confirmation & reporting
+### コア原則
 
-## Prompt Logs
+- 常に日本語で明確で詳細な説明を提供する
+- ユーザーの明示的な指示なく UI/UX や技術スタックに変更を加えない
+- 実装に進む前に不明確な要件を常に確認する
+- 明確な進捗指標とともにタスクを段階的に実行する
+- 既存の機能、API、共通プロセス全体で重複する機能をチェックする
+- ユーザーがアプローチを理解できるように、技術的決定の文脈と理由を提供する
 
-**MANDATORY**: After implementation completion, save implementation logs to `.prompts/` directory in `yyyy-mm-dd_feature-name.md` format.
+### 実行ワークフロー
 
-## Workflows
+1. **分析フェーズ:**
 
-### 1. Preparation
+   - タスク要件を明確に要約する
+   - ルール遵守を確認し、制約を特定する
+   - すべての技術要件と依存関係を特定する
 
-GitHub Username: lvncer
+2. **実装フェーズ:**
 
-### 2. Issue Management
+   - 確立されたディレクトリ構造と命名規則に従う
+   - 完全で本番環境対応のソリューションを実装する
+   - 必要なすべてのインポート、依存関係、設定を含める
 
-#### Issue Creation
+3. **品質保証フェーズ:**
 
-Use GitHub MCP (recommended)
+   - 包括的なエラーハンドリングを実装する（分離 → 解決 → 検証 → 分析）
+   - コードがベストプラクティスに従い、保守可能であることを確保する
+   - すべての機能が期待通りに動作することを検証する
 
-#### Phase Template
+4. **報告フェーズ:**
+   - 完了した作業の最終確認を提供する
+   - 重要な実装詳細を文書化する
+   - 関連する場合は次のステップや改善を提案する
 
-```md
-## Implementation Phases
-
-- [ ] **Phase 1: Environment Setup**
-
-  - [ ] Branch creation (`feat/123-feature`)
-  - [ ] Dependencies addition
-
-- [ ] **Phase 2: [Specific Work Content]**
-
-  - [ ] Detailed task 1
-  - [ ] Detailed task 2
-
-- [ ] **Phase N: Testing & Verification**
-  - [ ] Build test
-  - [ ] Function test
-
-## Completion Criteria
-
-- [ ] All phases complete
-- [ ] Tests passing
-- [ ] Review complete
-```
-
-#### Label Classification
-
-- **Priority**: `priority/high|medium|low`
-- **Type**: `enhancement|bug|documentation`
-- **Status**: `in-progress|review-needed|blocked`
-
-### 3. Branch & Git Operations
-
-#### Branch Creation & Naming
-
-- Format: `feat/123-feature-name`
-- Create after issue creation
-
-#### Commit Management
-
-- **Commit at each phase completion**
-- Manual commits (recommended)
-- **Include issue number** in commit messages
-- **Concise Japanese messages** (20 characters max)
-
-### 4. PR Creation & Merge
-
-#### PR Process
-
-- Use GitHub MCP (recommended)
-- Include issue number in PR title/description
-- Manual merge required
-- Auto-close issues
-
-#### Post-Merge
-
-```bash
-git branch -d feat/123-feature
-git push origin --delete feat/123-feature
-```
-
-## Tech Stack
+## 技術スタック
 
 ### Frontend Core
 
-- **React** + **Next.js** (Server Components)
-- **TypeScript** + **Bun** (runtime)
+| stacks     | description                              |
+| ---------- | ---------------------------------------- |
+| TypeScript |                                          |
+| Next.js    |                                          |
+| Bun        | 高速なランタイムとパッケージマネージャー |
 
 ### UI Framework
 
-- **Shadcn/ui** + **Tailwind CSS**
-- **Radix UI** + **Lucide React** (icons)
+| stacks       | description                                      |
+| ------------ | ------------------------------------------------ |
+| Shadcn/ui    | コンポーネントライブラリ                         |
+| Tailwind CSS | ユーティリティファーストのスタイリングアプローチ |
+| Radix UI     | アクセシブルな未スタイルの UI プリミティブ       |
+| Lucide React | アイコンシステム                                 |
 
 ### Authentication & Backend
 
-- **Clerk** (auth)
-- **Prisma** (ORM) + **Supabase** (BaaS)
+| stacks   | description                                |
+| -------- | ------------------------------------------ |
+| Clerk    | ユーザー管理を含む完全な認証ソリューション |
+| Prisma   | ORM                                        |
+| Supabase | PostgreSQL Database & Backend as a Service |
 
 ### Testing
 
-- **Vitest** (unit/integration)
-- **React Testing Library** (components)
-- **Playwright** (E2E)
-- **MSW** (API mocking)
+| stacks                | desctption                                         |
+| --------------------- | -------------------------------------------------- |
+| Vitest                | 高速なユニットテストと統合テスト                   |
+| React Testing Library | ユーザー中心のアプローチによるコンポーネントテスト |
+| Playwright            | 重要なユーザーフローのエンドツーエンドテスト       |
+| MSW                   | 信頼性の高いテストのための API モッキング          |
 
-### Others
+### Additional Tools
 
-- **Server Actions** + **Zod** (forms/validation)
-- **date-fns** (date handling)
-- **Stripe** (payments) + **Vercel** (deployment)
+| stacks   | description                                    |
+| -------- | ---------------------------------------------- |
+| Zod      | フォームと API のランタイム型検証              |
+| date-fns | 軽量な日付操作ライブラリ                       |
+| Stripe   | 決済処理の統合                                 |
+| Vercel   | Next.js に最適化されたデプロイプラットフォーム |
 
-## Directory Structure
+## MCP (Model Context Protocol)
+
+### GitKraken MCP
+
+- **目的**: GitKraken が提供する Git 操作とプロジェクト管理機能を MCP 経由で利用する
+- **使用コンテキスト**: ブランチ管理、コミット履歴の確認、変更のステージング/コミット、プルリクエストの作成・レビュー、イシュー管理など、Git ワークフローに関連する操作を自動化・支援する
+- **ベストプラクティス**: 変更をステージングしてコミットする前に必ずステータスを確認する。プルリクエストやイシュー操作は適切な認証情報（リポジトリ名、組織名など）を指定する
+
+### Next.js DevTools
+
+- **目的**: Next.js 16 以降の開発サーバーと統合し、リアルタイムでアプリケーションの内部情報にアクセスする
+- **使用コンテキスト**: エラー検出、ライブ状態クエリ、ページメタデータの取得、Server Actions の検査などに使用する
+- **ベストプラクティス**: 開発サーバー起動後、エージェントにエラーや実装箇所を質問することで、コンテキストを踏まえた正確な提案が得られる
+
+### Chrome DevTools
+
+- **目的**: Chrome DevTools を MCP 経由で操作し、ブラウザの開発者ツール機能をエージェントから利用可能にする
+- **使用コンテキスト**: パフォーマンス分析、ネットワークトラフィック監視、コンソールログ取得、DOM 操作、デバッグ作業などに使用する
+- **ベストプラクティス**: フロントエンドのパフォーマンスボトルネック特定やブラウザ固有の問題調査に活用する
+
+### Playwright
+
+- **目的**: ブラウザの自動操作とエンドツーエンドテストを行うためのフレームワーク
+- **使用コンテキスト**: 機能実装後、ユーザーフローを自動テストし、スクリーンショットを取得して UI の動作を検証する
+- **ベストプラクティス**: 重要なユーザージャーニーやビジュアル回帰テストに活用する
+
+### Deepwiki
+
+- **目的**: 外部ナレッジベースから GitHub リポジトリのドキュメントを検索する
+- **使用コンテキスト**: ユーザーが外部のオープンソースプロジェクトの調査を明示的に依頼した場合のみ使用する
+- **ベストプラクティス**: サードパーティライブラリやフレームワークの包括的な情報を収集するために活用する
+- **利用可能なメソッド**: `read_wiki_structure`, `read_wiki_contents`, `ask_question`
+
+### Supabase
+
+- **目的**: PostgreSQL データベース、認証、ストレージ、リアルタイム API を提供する Backend-as-a-Service
+- **使用コンテキスト**: CRUD 操作の実装や Row Level Security (RLS)ポリシーの設定により、セキュアなデータアクセスを提供する
+- **ベストプラクティス**: 適切な RLS ポリシーを実装し、型安全なデータベース操作を行う
+
+## ディレクトリ構造
 
 ```sh
 src/
-├── app/  # Routing & pages
+├── app/              # Next.js App Router - ルーティングとページ
 ├── components/
-│   ├── ui/  # ShadCn UI components
-│   └── layouts/
-├── hooks/
-├── types/
+│   ├── ui/           # Shadcn/ui コンポーネント - 再利用可能な UI プリミティブ
+│   └── layouts/      # 一貫したページ構造のためのレイアウトコンポーネント
+├── hooks/            # 共有ロジックのためのカスタム React フック
+├── types/            # TypeScript 型定義
 ├── lib/
-│   ├── constants/
-│   └── utils/
+│   ├── constants/    # アプリケーション定数と設定
+│   ├── utils/        # ユーティリティ関数とヘルパー
+│   ├── actions/      # Server Actions（サーバーサイドのミューテーション）
+│   └── services/     # ドメインサービス（ビジネスロジック、外部API呼び出し等）
 └── tests/
-    ├── unit/
-    ├── integration/
-    └── e2e/
+    ├── unit/         # 個別の関数/コンポーネントのユニットテスト
+    ├── integration/  # コンポーネント相互作用の統合テスト
+    └── e2e/          # 完全なユーザーフローのエンドツーエンドテスト
 ```
 
-### File Naming Conventions
+### ファイル命名規則
 
-- Pages: `page.tsx`
-- Layouts: `layout.tsx`
-- Loading: `loading.tsx`
-- Errors: `error.tsx`
-- APIs: `route.ts`
+- **Pages**: `page.tsx` - Next.js App Router のページコンポーネント
+- **Layouts**: `layout.tsx` - ルートグループの共有レイアウトコンポーネント
+- **Loading**: `loading.tsx` - ルートセグメントのローディング UI
+- **Errors**: `error.tsx` - ルートセグメントのエラー境界コンポーネント
+- **APIs**: `route.ts` - サーバーエンドポイントの API ルートハンドラー
 
-### Component Design
+### コンポーネント設計原則
 
-- **Server Components** (default): Data fetching, SEO
-- **Client Components** (when needed): Browser APIs, event listeners, hooks
+- **Server Components (デフォルト)**: データフェッチ、SEO 最適化、静的コンテンツのレンダリングに使用
+- **Client Components (必要な場合)**: ブラウザ API、イベントリスナー、または React フックが必要な場合のみ使用
+- **継承よりもコンポジション**: 小さな焦点を絞ったコンポーネントを組み合わせて複雑な UI を構築
 
-### API Design
+### API 設計パターン
 
-- **No GET APIs** → Use Server Components for data fetching
-- **POST/PATCH/PUT/DELETE only**
-- Prefer Server Actions
+- **GET API なし**: API ルートの代わりに Server Components を使用してデータフェッチ
+- **Server Actions を優先**: フォーム送信とミューテーションには Server Actions を使用
+- **外部統合用の API ルート**: ウェブフックとサードパーティ統合にのみ POST/PATCH/PUT/DELETE を使用
+- **型安全性**: リクエスト/レスポンス検証には常に Zod スキーマを使用
 
-## Test Driven Development
+### Server Actions の配置方針
 
-### Basic Principles
+- 共有/ドメイン横断的な Server Actions は `lib/actions/` に配置する
+- ルート専用の小さな Server Actions は、必要に応じて該当ルート直下（例: `app/(group)/feature/actions.ts`）に置いてもよい
+- ファイル命名は動詞ベースで、1 ファイル = 1 概念（例: `user.ts`, `post.ts`）を原則とし、`index.ts` で再エクスポートを許容
 
-- Follow **Red-Green-Refactor** cycle
-- Write tests before implementation
-- Progress in small units
-- Create tests for all features
+### hooks / services / actions の使い分け
 
-### Development Cycle
+- `hooks`（クライアント専用）: React の状態・副作用・UI 連携に関するロジック。ブラウザ API、イベントハンドリング、フォーム状態など UI 寄りの責務
+- `services`（サーバー/クライアント共有可）: ビジネスロジック、外部 API 呼び出し、プリミティブの組み合わせなどを純粋関数中心で実装。副作用は抽象化しテスト容易性を最優先
+- `actions`（サーバー専用）: フォーム送信やミューテーションの入口。認証/認可、入力検証（Zod）、トランザクション制御、`services` のオーケストレーションを担当
 
-1. **Red**: Write failing tests
-2. **Green**: Write minimum code to pass
-3. **Refactor**: Improve code quality
+ガイドライン:
 
-### Test Structure
+- `hooks` は UI から `actions` を呼び出すための薄い橋渡しに留める
+- ビジネスルールは可能な限り `services` に集約し、`actions` は I/O とオーケストレーションに専念
+- `services` は副作用境界を明確化し、テストではモックで置き換え可能にする
 
-- **Unit Tests**: Function/method level
-- **Integration Tests**: Component interaction
-- **E2E Tests**: User operation simulation
+## UI/UX ガイドライン
 
-### Coverage & Performance
+### 重要な制約
 
-- Target: 80%+ coverage
-- Core logic: aim for 100%
-- Fast test execution
-- Mock external dependencies
+- **許可されていない UI 変更なし**: ユーザーの明示的な承認なく既存の UI/UX 要素を変更しない
+- **デザインの一貫性**: すべてのレイアウト、色、フォント、スペーシングの変更には明示的な承認が必要
+- **コンポーネントの再利用**: 新しいものを作成するよりも既存のコンポーネントの使用を常に優先する
+- **最小限のカスタマイズ**: 特に要求されない限り、カスタムスタイリングを最小限に抑える
 
-## UI/UX Guidelines
+### デザインシステムの原則
 
-### Critical Constraints
+- **モバイルファーストレスポンシブデザイン**: すべてのインターフェースがデバイスサイズ全体でシームレスに動作することを確保する
+- **アクセシビリティ準拠**: 包括的なユーザー体験のために WAI-ARIA ガイドラインに従う
+- **キーボードナビゲーション**: すべてのインタラクティブ要素に完全なキーボードアクセシビリティを実装する
+- **視覚的アクセシビリティ**: 適切なコントラスト比と読みやすいタイポグラフィを維持する
 
-- **No existing UI changes without approval**
-- Layout/color/font/spacing changes require approval
-- Minimal customization
-- Reuse existing components
+### スタイリング標準
 
-### Design System
-
-- Mobile-first responsive
-- WAI-ARIA compliance
-- Keyboard navigation support
-- Proper contrast ratios
-
-### Styling & Dark Mode
-
-- Custom classes with `@layer`
-- `kebab-case` naming
-- System-synchronized dark mode
-
-## Database Design
-
-### Database Naming Conventions
-
-- Models: Singular PascalCase (`User`, `Project`)
-- Fields: camelCase (`firstName`, `createdAt`)
-- Primary key: `id`
-- Foreign key: `[tableName]Id`
-- Timestamps: `createdAt`, `updatedAt`
-
-### Relations & Security
-
-- 1-to-many: `@relation`
-- Many-to-many: intermediate table
-- Cascade deletion: `onDelete: Cascade`
-- Index frequently searched fields
-- Validate inputs, encrypt sensitive data
-
-### File Storage
-
-- **SQL files**: `/public/sql/` directory
-- Migrations: `prisma/migrations/`
-
-## Essential Checklist
-
-### Start
-
-- [ ] GitHub username obtained
-- [ ] Issue created with phases
-- [ ] Branch created (with issue number)
-- [ ] Appropriate labels set
-
-### Development
-
-- [ ] Commit at each phase completion
-- [ ] Issue number in commit messages
-- [ ] Regular pushes
-- [ ] Issue checkbox updates
-
-### Completion
-
-- [ ] All phases complete
-- [ ] Final tests executed
-- [ ] PR created (with issue number)
-- [ ] Manual merge executed
-- [ ] Issue auto-closed confirmed
-- [ ] Branch deleted
-- [ ] **Prompt log saved to `.prompts/`**
+- **Tailwind CSS アプローチ**: `@layer` ディレクティブを使用してカスタムコンポーネントでユーティリティクラスを使用
+- **命名規則**: カスタム CSS クラスとコンポーネント名には `kebab-case` を使用
+- **ダークモードサポート**: Tailwind の dark: バリアントを使用してシステム同期ダークモードを実装
+- **パフォーマンス最適化**: カスタム CSS を最小限に抑え、Tailwind のパージ機能を活用する
