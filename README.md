@@ -17,12 +17,12 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 - [Cursor Rules](./.cursor/rules/)
 
-  | ファイル名                              | 概要                               | 編集する必要 |
-  | --------------------------------------- | ---------------------------------- | ------------ |
-  | [index.mdc](/.cursor/rules/index.mdc)   | 基本的な開発原則など               |              |
-  | [uiux.mdc](/.cursor/rules/uiux.mdc)     | UI/UX 設計ルール                   |              |
-  | [mcps.mdc](/.cursor/rules/mcps.mdc)     | 使用する MCP のツールなど          | 必要に応じて |
-  | [nextjs.mdc](/.cursor/rules/nextjs.mdc) | Next.js におけるベストプラクティス |              |
+  | ファイル名                              | 概要                               | 編集する必要 | Always Apply |
+  | --------------------------------------- | ---------------------------------- | ------------ | ------------ |
+  | [index.mdc](/.cursor/rules/index.mdc)   | 基本的な開発原則など               |              | Yes          |
+  | [uiux.mdc](/.cursor/rules/uiux.mdc)     | UI/UX 設計ルール                   |              | Yes          |
+  | [mcps.mdc](/.cursor/rules/mcps.mdc)     | 使用する MCP のツールなど          | 必要に応じて | Yes          |
+  | [nextjs.mdc](/.cursor/rules/nextjs.mdc) | Next.js におけるベストプラクティス |              | **No**       |
 
 - [Cursor Custom Slash Commands](./.cursor/commands/): / [README.md](./.cursor/slash-commands.md)
 
