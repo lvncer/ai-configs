@@ -15,10 +15,16 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 ### Cursor
 
-- [Cursor Rules](./.cursor/rules/index.mdc)
-- [Cursor Custom Slash Commands](./.cursor/commands/)
+- [Cursor Rules](./.cursor/rules/)
 
-  - [README.md](./.cursor/slash-commands.md) here.
+  | ファイル名                              | 概要                               | 編集する必要 |
+  | --------------------------------------- | ---------------------------------- | ------------ |
+  | [index.mdc](/.cursor/rules/index.mdc)   | 基本的な開発原則など               |              |
+  | [uiux.mdc](/.cursor/rules/uiux.mdc)     | UI/UX 設計ルール                   |              |
+  | [mcps.mdc](/.cursor/rules/mcps.mdc)     | 使用する MCP のツールなど          | 必要に応じて |
+  | [nextjs.mdc](/.cursor/rules/nextjs.mdc) | Next.js におけるベストプラクティス |              |
+
+- [Cursor Custom Slash Commands](./.cursor/commands/): / [README.md](./.cursor/slash-commands.md)
 
 - [Cursor MCP](./.cursor/mcp.json)
 
@@ -39,17 +45,15 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 ## ルール構成
 
-### 常時適用ルール
-
-| Agenda              | 説明                                              |
-| ------------------- | ------------------------------------------------- |
-| instructions        | AI に指示する内容                                 |
-| Global Rules        | 基本的な開発原則                                  |
-| Execution Workflows | 実行フロー                                        |
-| Tech Stack          | 使用技術とバージョン管理                          |
-| MCP                 | 使用する MCP のツールと使用タイミング、簡単な説明 |
-| Directory Structure | プロジェクト構造とファイル命名規則                |
-| UI/UX Guidelines    | UI/UX 設計・実装ルール                            |
+| Agenda              | 説明                                                                |
+| ------------------- | ------------------------------------------------------------------- |
+| instructions        | AI に指示する内容                                                   |
+| Global Rules        | 基本的な開発原則                                                    |
+| Execution Workflows | 実行フロー （段階的にスラッシュコマンドへ移行）                     |
+| Tech Stack          | 使用技術とバージョン管理 （廃止。`documents/`にまとめる）           |
+| MCP                 | 使用する MCP のツールと使用タイミング、簡単な説明                   |
+| Directory Structure | プロジェクト構造とファイル命名規則 （廃止。`documents/`にまとめる） |
+| UI/UX Guidelines    | UI/UX 設計・実装ルール                                              |
 
 ### MCPs (Model Context Protocol)
 
