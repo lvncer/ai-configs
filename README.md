@@ -16,16 +16,8 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 ### Cursor
 
 - [Cursor Rules](./.cursor/rules/)
-
-  | ファイル名                              | 概要                               | 編集する必要 | Always Apply |
-  | --------------------------------------- | ---------------------------------- | ------------ | ------------ |
-  | [index.mdc](/.cursor/rules/index.mdc)   | 基本的な開発原則など               |              | Yes          |
-  | [uiux.mdc](/.cursor/rules/uiux.mdc)     | UI/UX 設計ルール                   |              | Yes          |
-  | [mcps.mdc](/.cursor/rules/mcps.mdc)     | 使用する MCP のツールなど          | 必要に応じて | Yes          |
-  | [nextjs.mdc](/.cursor/rules/nextjs.mdc) | Next.js におけるベストプラクティス |              | **No**       |
-
-- [Cursor Custom Slash Commands](./.cursor/commands/): / [README.md](./.cursor/slash-commands.md)
-
+- [Cursor Custom Slash Commands](./.cursor/commands/)
+- [Cursor Skills](.cursor/skills/)
 - [Cursor MCP](./.cursor/mcp.json)
 
 ### Claude Code
@@ -45,17 +37,49 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 ## ルール構成
 
-| Agenda              | 説明                                                                |
-| ------------------- | ------------------------------------------------------------------- |
-| instructions        | AI に指示する内容                                                   |
-| Global Rules        | 基本的な開発原則                                                    |
-| Execution Workflows | 実行フロー （段階的にスラッシュコマンドへ移行）                     |
-| Tech Stack          | 使用技術とバージョン管理 （廃止。`documents/`にまとめる）           |
-| MCP                 | 使用する MCP のツールと使用タイミング、簡単な説明                   |
-| Directory Structure | プロジェクト構造とファイル命名規則 （廃止。`documents/`にまとめる） |
-| UI/UX Guidelines    | UI/UX 設計・実装ルール                                              |
+| ファイル名                            | 概要                      | 編集する必要 | Always Apply |
+| ------------------------------------- | ------------------------- | ------------ | ------------ |
+| [index.mdc](/.cursor/rules/index.mdc) | 基本的な開発原則など      |              | Yes          |
+| [uiux.mdc](/.cursor/rules/uiux.mdc)   | UI/UX 設計ルール          |              | Yes          |
+| [mcps.mdc](/.cursor/rules/mcps.mdc)   | 使用する MCP のツールなど | 必要に応じて | Yes          |
 
-### MCPs (Model Context Protocol)
+## スラッシュコマンド一覧
+
+### 開発効率化コマンド
+
+| command     | description            |
+| ----------- | ---------------------- |
+| `/logs`     | プロンプトログ保存     |
+| `/git-sync` | Git 同期・プッシュ解決 |
+
+### テスト専門コマンド
+
+| command     | description          |
+| ----------- | -------------------- |
+| `/test`     | テスト・ビルド実行   |
+| `/coverage` | テストカバレッジ検証 |
+
+### 開発ワークフローコマンド
+
+| command             | description              |
+| ------------------- | ------------------------ |
+| `/issue`            | GitHub Issue 作成・管理  |
+| `/branch`           | ブランチ作成・Git 操作   |
+| `/worktree`         | Worktree 作成・起動      |
+| `/worktree-cleanup` | Worktree 整理・削除      |
+| `/commit`           | コミット管理・規約       |
+| `/pr`               | プルリクエスト作成・管理 |
+| `/pr-review`        | プルリクエストレビュー   |
+
+### 追加予定
+
+- 依存関係解消
+- テスト駆動開発ワークフロー
+- データベース確認
+- セキュリティチェック
+- AWSデプロイ、監視
+
+## MCPs (Model Context Protocol)
 
 | MCP              | 説明                                                                                                                                            |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
