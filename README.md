@@ -74,7 +74,13 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 - セキュリティチェック
 - AWSデプロイ、監視
 
-## 
+## Hooks 一覧
+
+| ファイル名                                             | 実行タイミング                    | 内容                                                             |
+| ------------------------------------------------------ | --------------------------------- | ---------------------------------------------------------------- |
+| [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)         | ツール実行のたび                  | 効果音（Morse）                                                  |
+| [on-notification.sh](.cursor/hooks/on-notification.sh) | AI がユーザーの入力を待っている時 | 効果音（Bottle）+ 通知「Action required for your next command.」 |
+| [on-stop.sh](.cursor/hooks/on-stop.sh)                 | タスク完了時                      | 効果音（Hero）+ 通知「Task completed successfully!」             |
 
 ## MCPs (Model Context Protocol)
 
