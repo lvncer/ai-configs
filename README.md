@@ -9,10 +9,6 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 ## 対応 AI
 
-### Agents
-
-- [Agents.md](./AGENTS.md)
-
 ### Cursor
 
 - [Cursor Rules](./.cursor/rules/)
@@ -20,13 +16,13 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 - [Cursor Skills](.cursor/skills/)
 - [Cursor MCP](./.cursor/mcp.json)
 
-### Claude Code
+### Claude Code（停止中）
 
 - [Claude Code Rules](./CLAUDE.md)
 - [Claude Code MCP](./mcp.json)
 - [Claude Code Settings](./.claude/settings.local.json)
 
-### Windsurf
+### Windsurf（停止中）
 
 - [Windsurf Rules](./.windsurf/rules/index.md)
 - [Windsurf Workflows](./.windsurf/workflows/)
@@ -34,6 +30,10 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
   - The `~/.codeium/windsurf/mcp_config.json` file is a JSON file that contains a list of servers that Cascade can connect to.
 - [Cascade Hooks](https://docs.windsurf.com/windsurf/cascade/hooks)
   - User-level hooks are perfect for personal preferences and optional workflows.`~/.codeium/windsurf/hooks.json`
+
+### 追加予定 AI
+
+- AGENTS.md
 
 ## ルール構成
 
@@ -71,7 +71,7 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 | `/pr`               | プルリクエスト作成・管理 |
 | `/pr-review`        | プルリクエストレビュー   |
 
-### 追加予定
+### 追加予定コマンド
 
 - 依存関係解消
 - テスト駆動開発ワークフロー
