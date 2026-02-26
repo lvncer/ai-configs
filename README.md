@@ -15,6 +15,11 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 - [Cursor Custom Slash Commands](./.cursor/commands/)
 - [Cursor Skills](.cursor/skills/)
 - [Cursor MCP](./.cursor/mcp.json)
+- Cursor Hooks
+  - [Cursor hook settings](./.cursor/hooks.json)
+  - [Cursor hook shell script files](/.cursor/hooks/)
+- Execution Controls
+  - [sandbox.json](/.cursor/sandbox.json)
 
 ### Claude Code（停止中）
 
@@ -45,24 +50,14 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 ## スラッシュコマンド一覧
 
-### 開発効率化コマンド
-
-| command     | description            |
-| ----------- | ---------------------- |
-| `/logs`     | プロンプトログ保存     |
-| `/git-sync` | Git 同期・プッシュ解決 |
-
-### テスト専門コマンド
-
-| command     | description          |
-| ----------- | -------------------- |
-| `/test`     | テスト・ビルド実行   |
-| `/coverage` | テストカバレッジ検証 |
-
-### 開発ワークフローコマンド
-
 | command             | description              |
 | ------------------- | ------------------------ |
+| `/logs`             | プロンプトログ保存       |
+| `/git-sync`         | Git 同期・プッシュ解決   |
+|                     |                          |
+| `/test`             | テスト・ビルド実行       |
+| `/coverage`         | テストカバレッジ検証     |
+|                     |                          |
 | `/issue`            | GitHub Issue 作成・管理  |
 | `/branch`           | ブランチ作成・Git 操作   |
 | `/worktree`         | Worktree 作成・起動      |
@@ -78,6 +73,8 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 - データベース確認
 - セキュリティチェック
 - AWSデプロイ、監視
+
+## 
 
 ## MCPs (Model Context Protocol)
 
