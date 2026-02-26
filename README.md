@@ -92,3 +92,19 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 | Playwright       | ブラウザの自動操作とエンドツーエンドテストを行う                                                                                                |
 | DeepWiki         | 外部ナレッジベースから GitHub リポジトリのドキュメントを検索                                                                                    |
 | Supabase         | PostgreSQL データベース、認証、ストレージ、リアルタイム API を提供（アクセストークン不要、プロジェクトリファレンス ID 必要）                    |
+
+## Execution Controls
+
+[sandbox.json](/.cursor/sandbox.json) により、エージェントが実行するコマンドのサンドボックス制御が行われる。
+
+### 制御される操作
+
+| 操作 | 制御内容 |
+|------|----------|
+| **ネットワーク** | `networkPolicy` で制御。`default: "deny"` の場合、`allow` に指定したドメイン以外へのアクセスをブロック |
+| **ファイルシステム** | ワークスペース内への書き込みのみ許可。それ以外のディレクトリは読み取りのみ |
+
+### 設定の反映に必要なこと
+
+**「Auto-Run in Sandbox」を有効にする必要がある。** Cursor の設定（Settings → Features → Agent）で「Auto-Run in Sandbox」をオンにしないと、`sandbox.json` のポリシーが適用されない。
+
