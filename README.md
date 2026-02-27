@@ -50,21 +50,21 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 ## スラッシュコマンド一覧
 
-| command             | description              |
-| ------------------- | ------------------------ |
-| `/logs`             | プロンプトログ保存       |
-| `/git-sync`         | Git 同期・プッシュ解決   |
-|                     |                          |
-| `/test`             | テスト・ビルド実行       |
-| `/coverage`         | テストカバレッジ検証     |
-|                     |                          |
-| `/issue`            | GitHub Issue 作成・管理  |
-| `/branch`           | ブランチ作成・Git 操作   |
-| `/worktree`         | Worktree 作成・起動      |
-| `/worktree-cleanup` | Worktree 整理・削除      |
-| `/commit`           | コミット管理・規約       |
-| `/pr`               | プルリクエスト作成・管理 |
-| `/pr-review`        | プルリクエストレビュー   |
+| command                                                    | description              |
+| ---------------------------------------------------------- | ------------------------ |
+| [/logs](/.cursor/commands/logs.md)                         | プロンプトログ保存       |
+| [/git-sync](/.cursor/commands/git-sync.md)                 | Git 同期・プッシュ解決   |
+|                                                            |                          |
+| [/test](/.cursor/commands/test.md)                         | テスト・ビルド実行       |
+| [/coverage](/.cursor/commands/coverage.md)                 | テストカバレッジ検証     |
+|                                                            |                          |
+| [/issue](/.cursor/commands/issue.md)                       | GitHub Issue 作成・管理  |
+| [/branch](/.cursor/commands/branch.md)                     | ブランチ作成・Git 操作   |
+| [/worktree](/.cursor/commands/worktree.md)                 | Worktree 作成・起動      |
+| [/worktree-cleanup](/.cursor/commands/worktree-cleanup.md) | Worktree 整理・削除      |
+| [/commit](/.cursor/commands/commit.md)                     | コミット管理・規約       |
+| [/pr](/.cursor/commands/pr.md)                             | プルリクエスト作成・管理 |
+| [/pr-review](/.cursor/commands/pr-review.md)               | プルリクエストレビュー   |
 
 ### 追加予定コマンド
 
