@@ -3,6 +3,8 @@
 .codex/
 .cursor/
 .gemini/
+.github/instructions/
+.github/copilot-instructions.md
 .opencode/
 .windsurf/
 .mcp.json
