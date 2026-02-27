@@ -4,7 +4,7 @@
   "workspaces": {
     "": {
       "name": "ai-configs",
-      "dependencies": {
+      "devDependencies": {
         "prettier": "^3.8.1",
         "prettier-plugin-sh": "^0.18.0",
       },
