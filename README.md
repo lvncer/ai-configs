@@ -82,7 +82,7 @@ rm -rf "$tmp_dir"
 
 | Trigger              | Shell Scripts                                        | 内容                                                                                                          |
 | -------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| beforeShellExecution | [validate-shell.sh](.cursor/hooks/validate-shell.sh) | 禁止コマンドの検証（awk/sed/git push/git add -A/rm -rf 等）。matcher で git/awk/sed/rm を含むコマンドのみ検証 |
+| beforeShellExecution | [validate-shell.sh](.cursor/hooks/validate-shell.sh) | 禁止コマンドの検証（git push/git merge/gh pr merge/gh repo sync/rm -rf /）。matcher で git/gh/rm を含むコマンドのみ検証 |
 | postToolUse          | [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)       | 効果音（Morse）                                                                                               |
 | stop                 | [on-stop.sh](.cursor/hooks/on-stop.sh)               | 効果音（Hero）+ 通知「Task completed. Action required for your next command.」                                |
 
