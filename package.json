@@ -1,0 +1,10 @@
+{
+  "name": "ai-configs",
+  "version": "0.1.0",
+  "scripts": {
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4"
+  }
+}
