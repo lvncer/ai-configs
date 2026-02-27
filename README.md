@@ -80,12 +80,13 @@ rm -rf "$tmp_dir"
 
 ## Hooks 一覧
 
-| ファイル名                                             | 実行タイミング                       | 内容                                                                                  |
-| ------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------- |
-| [validate-shell.sh](.cursor/hooks/validate-shell.sh)   | Shell 実行の直前（beforeShellExecution） | 禁止コマンドの検証（awk/sed/git push/git add -A/rm -rf 等）。matcher で git/awk/sed/rm を含むコマンドのみ検証。sandbox バイパス時も有効 |
-| [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)         | ツール実行のたび                     | 効果音（Morse）                                                                       |
-| [on-notification.sh](.cursor/hooks/on-notification.sh) | AI がユーザーの入力を待っている時    | 効果音（Bottle）+ 通知「Action required for your next command.」                      |
-| [on-stop.sh](.cursor/hooks/on-stop.sh)                 | タスク完了時                         | 効果音（Hero）+ 通知「Task completed successfully!」                                  |
+| Trigger              | Shell Scripts                                        | 内容                                                                                                          |
+| -------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| beforeShellExecution | [validate-shell.sh](.cursor/hooks/validate-shell.sh) | 禁止コマンドの検証（awk/sed/git push/git add -A/rm -rf 等）。matcher で git/awk/sed/rm を含むコマンドのみ検証 |
+| postToolUse          | [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)       | 効果音（Morse）                                                                                               |
+| stop                 | [on-stop.sh](.cursor/hooks/on-stop.sh)               | 効果音（Hero）+ 通知「Task completed. Action required for your next command.」                                |
+
+> **補足**: `afterAgentResponse`（AI が入力を待っている時の通知）は、エージェントループ中に期待通り発火しないため hooks から削除済み。Cursor の仕様上、該当タイミング専用のフックは未提供。
 
 ## MCPs (Model Context Protocol)
 
