@@ -1,0 +1,10 @@
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.opencode/
+.windsurf/
+.mcp.json
+CLAUDE.md
+AGENTS.md
