@@ -36,8 +36,8 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 tmp_dir="$(mktemp -d)"
 curl -L https://github.com/lvncer/ai-configs/archive/refs/heads/main.tar.gz -o "$tmp_dir/ai-configs-main.tar.gz"
 tar -xzf "$tmp_dir/ai-configs-main.tar.gz" -C "$tmp_dir"
-rm -rf <プロジェクトパス>/.cursor
-cp -R "$tmp_dir/ai-configs-main/.cursor" <プロジェクトパス>/.cursor
+rm -rf < プロジェクトパス > /.cursor
+cp -R "$tmp_dir/ai-configs-main/.cursor" < プロジェクトパス > /.cursor
 rm -rf "$tmp_dir"
 ```
 
@@ -80,11 +80,11 @@ rm -rf "$tmp_dir"
 
 ## Hooks 一覧
 
-| Trigger              | Shell Scripts                                        | 内容                                                                                                          |
-| -------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Trigger              | Shell Scripts                                        | 内容                                                                                                                    |
+| -------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | beforeShellExecution | [validate-shell.sh](.cursor/hooks/validate-shell.sh) | 禁止コマンドの検証（git push/git merge/gh pr merge/gh repo sync/rm -rf /）。matcher で git/gh/rm を含むコマンドのみ検証 |
-| postToolUse          | [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)       | 効果音（Morse）                                                                                               |
-| stop                 | [on-stop.sh](.cursor/hooks/on-stop.sh)               | 効果音（Hero）+ 通知「Task completed. Action required for your next command.」                                |
+| postToolUse          | [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)       | 効果音（Morse）                                                                                                         |
+| stop                 | [on-stop.sh](.cursor/hooks/on-stop.sh)               | 効果音（Hero）+ 通知「Task completed. Action required for your next command.」                                          |
 
 > **補足**: `afterAgentResponse`（AI が入力を待っている時の通知）は、エージェントループ中に期待通り発火しないため hooks から削除済み。Cursor の仕様上、該当タイミング専用のフックは未提供。
 
