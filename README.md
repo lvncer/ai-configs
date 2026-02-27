@@ -45,11 +45,11 @@ rm -rf "$tmp_dir"
 
 ## ルール構成
 
-| ファイル名                            | 概要                      | 編集する必要 | Always Apply |
-| ------------------------------------- | ------------------------- | ------------ | ------------ |
-| [index.mdc](/.cursor/rules/index.mdc) | 基本的な開発原則など      |              | Yes          |
-| [uiux.mdc](/.cursor/rules/uiux.mdc)   | UI/UX 設計ルール          |              | Yes          |
-| [mcps.mdc](/.cursor/rules/mcps.mdc)   | 使用する MCP のツールなど | 必要に応じて | Yes          |
+| ファイル名                                        | 概要                                | 編集する必要 | Always Apply |
+| ------------------------------------------------- | ----------------------------------- | ------------ | ------------ |
+| [index.mdc](/.cursor/rules/index.mdc)             | 基本的な開発原則など                |              | Yes          |
+| [uiux.mdc](/.cursor/rules/uiux.mdc)               | UI/UX 設計ルール                    |              | Yes          |
+| [mcps.mdc](/.cursor/rules/mcps.mdc)               | 使用する MCP のツールなど           | 必要に応じて | Yes          |
 | [ng-commands.mdc](/.cursor/rules/ng-commands.mdc) | 禁止コマンド（awk/sed/git push 等） |              | Yes          |
 
 ## スラッシュコマンド一覧
@@ -80,12 +80,12 @@ rm -rf "$tmp_dir"
 
 ## Hooks 一覧
 
-| ファイル名                                             | 実行タイミング                    | 内容                                                             |
-| ------------------------------------------------------ | --------------------------------- | ---------------------------------------------------------------- |
-| [validate-shell.sh](.cursor/hooks/validate-shell.sh)   | Shell ツール実行の直前（preToolUse） | 禁止コマンドの検証（awk/sed/git push/git add -A/rm -rf 等）。sandbox バイパス時も有効 |
-| [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)         | ツール実行のたび                  | 効果音（Morse）                                                  |
-| [on-notification.sh](.cursor/hooks/on-notification.sh) | AI がユーザーの入力を待っている時 | 効果音（Bottle）+ 通知「Action required for your next command.」 |
-| [on-stop.sh](.cursor/hooks/on-stop.sh)                 | タスク完了時                      | 効果音（Hero）+ 通知「Task completed successfully!」             |
+| ファイル名                                             | 実行タイミング                       | 内容                                                                                  |
+| ------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------- |
+| [validate-shell.sh](.cursor/hooks/validate-shell.sh)   | Shell 実行の直前（beforeShellExecution） | 禁止コマンドの検証（awk/sed/git push/git add -A/rm -rf 等）。matcher で git/awk/sed/rm を含むコマンドのみ検証。sandbox バイパス時も有効 |
+| [on-tool-use.sh](.cursor/hooks/on-tool-use.sh)         | ツール実行のたび                     | 効果音（Morse）                                                                       |
+| [on-notification.sh](.cursor/hooks/on-notification.sh) | AI がユーザーの入力を待っている時    | 効果音（Bottle）+ 通知「Action required for your next command.」                      |
+| [on-stop.sh](.cursor/hooks/on-stop.sh)                 | タスク完了時                         | 効果音（Hero）+ 通知「Task completed successfully!」                                  |
 
 ## MCPs (Model Context Protocol)
 
