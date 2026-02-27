@@ -28,6 +28,21 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 - Widnsurf
 - Claude Code
 
+## SETUP
+
+他プロジェクトで `.cursor` を使う場合、このリポジトリから取得する:
+
+```sh
+tmp_dir="$(mktemp -d)"
+curl -L https://github.com/lvncer/ai-configs/archive/refs/heads/main.tar.gz -o "$tmp_dir/ai-configs-main.tar.gz"
+tar -xzf "$tmp_dir/ai-configs-main.tar.gz" -C "$tmp_dir"
+rm -rf <プロジェクトパス>/.cursor
+cp -R "$tmp_dir/ai-configs-main/.cursor" <プロジェクトパス>/.cursor
+rm -rf "$tmp_dir"
+```
+
+`<プロジェクトパス>` を対象のワークスペースルートに置き換える。
+
 ## ルール構成
 
 | ファイル名                            | 概要                      | 編集する必要 | Always Apply |
