@@ -13,7 +13,9 @@ Custom Prompts は、開発効率と品質を向上させるための独自の�
 
 - [Rules](./.cursor/rules/)
 - [Custom Slash Commands](./.cursor/commands/)
-- [Skills](.cursor/skills/)
+- Skills
+  - [.cursor/skills/](.cursor/skills/)
+  - [/.agents/skills/](/.agents/skills/)
 - [MCPs](./.cursor/mcp.json)
 - Cursor Hooks
   - [Cursor hook settings](./.cursor/hooks.json)
@@ -125,3 +127,5 @@ rm -rf "$tmp_dir"
 | [debugger](/.cursor/agents/debugger.md)                 | バグ調査・原因特定・修正の専門家                         |
 | [test-runner](/.cursor/agents/test-runner.md)           | テスト設計・実装・実行の専門家                           |
 | [security-auditor](/.cursor/agents/security-auditor.md) | セキュリティ監査の専門家。脆弱性検出、OWASP Top 10       |
+
+## Skills 一覧
