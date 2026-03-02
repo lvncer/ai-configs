@@ -129,3 +129,13 @@ rm -rf "$tmp_dir"
 | [security-auditor](/.cursor/agents/security-auditor.md) | セキュリティ監査の専門家。脆弱性検出、OWASP Top 10       |
 
 ## Skills 一覧
+
+- `nextjs-best-practice`
+
+  ```sh
+  npx skills add https://github.com/lvncer/ai-configs/.cursor/skills/nextjs-best-practice/SKILL.md
+  ```
+
+- other
+
+  [https://skills.sh/](https://skills.sh/) からインストールしてください。

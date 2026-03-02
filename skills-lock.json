@@ -6,6 +6,11 @@
       "sourceType": "github",
       "computedHash": "bc2eac9d2c34b89497d233dabb82b27d0f94d91ae32fb5de8b2f4017f3d63eb9"
     },
+    "typescript-advanced-types": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "a03a83996ae9d2f4dd6d4db08899d61761c7d5351bce4c695d20a21197742a36"
+    },
     "vercel-composition-patterns": {
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
