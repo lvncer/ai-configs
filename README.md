@@ -136,6 +136,12 @@ rm -rf "$tmp_dir"
   npx skills add https://github.com/lvncer/ai-configs/.cursor/skills/nextjs-best-practice/SKILL.md
   ```
 
+- `git-sync-guard`
+
+  ```sh
+  npx skills add https://github.com/lvncer/ai-configs/.cursor/skills/git-sync-guard/SKILL.md
+  ```
+
 - other
 
   [https://skills.sh/](https://skills.sh/) からインストールしてください。
