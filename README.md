@@ -114,7 +114,8 @@ rm -rf "$tmp_dir"
 
 ### 設定の反映に必要なこと
 
-**「Auto-Run in Sandbox」を有効にする必要がある。** Cursor の設定（Settings → Features → Agent）で「Auto-Run in Sandbox」をオンにしないと、`sandbox.json` のポリシーが適用されない。
+「Auto-Run in Sandbox」を有効にする必要がある。
+Cursor の設定（Settings → Features → Agent）で「Auto-Run in Sandbox」をオンにしないと、`sandbox.json` のポリシーが適用されない。
 
 ## Subagent 一覧
 
@@ -130,6 +131,13 @@ rm -rf "$tmp_dir"
 
 ## Skills 一覧
 
+skills 一覧のバージョン管理は [/skills-lock.json](/skills-lock.json) を使用しています。
+
+新規のskillをインストールする際は、 [https://skills.sh/](https://skills.sh/) からインストールしてください。
+
+以下は私が作成したスキルです。
+下記コマンドからインストールできます。
+
 - `nextjs-best-practice`
 
   ```sh
@@ -141,7 +149,3 @@ rm -rf "$tmp_dir"
   ```sh
   npx skills add https://github.com/lvncer/ai-configs/.cursor/skills/git-sync-guard/SKILL.md
   ```
-
-- other
-
-  [https://skills.sh/](https://skills.sh/) からインストールしてください。
