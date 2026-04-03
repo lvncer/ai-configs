@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "git-sync-guard": {
+      "source": "lvncer/ai-configs",
+      "sourceType": "github",
+      "computedHash": "715ece0eb824ab85d975682a89c86783fa925635261f9e4e4d147f70797bb5e3"
+    },
     "nextjs-best-practice": {
       "source": "lvncer/ai-configs",
       "sourceType": "github",
