@@ -11,6 +11,11 @@
       "sourceType": "github",
       "computedHash": "bc2eac9d2c34b89497d233dabb82b27d0f94d91ae32fb5de8b2f4017f3d63eb9"
     },
+    "tailwind-design-system": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "988d80e52c67c3692d43cc963b6a048a239895e88b272b061de55370d0f8efc3"
+    },
     "typescript-advanced-types": {
       "source": "wshobson/agents",
       "sourceType": "github",
